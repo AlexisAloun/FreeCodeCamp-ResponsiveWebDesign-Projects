@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<!-- Code Camp Responsive Web Design Project: https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-tribute-page -->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!--Responsive Meta Tags -->
+    <link href="reset.css" rel="stylesheet"><!--CCS Reset-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"><!--Bootstrap CSS CDN-->
+    <link href="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"><!-- freeCodeCamp Test CDN -->
+    <title>Tribute Page</title>
+    <style>
+        #main, body {
+            background-color: lightgray;
+        }
+        #title {
+            text-align: center;
+        }
+        #img-div {
+            background-color: ghostwhite;
+            width: 95%;
+            padding: 20px;
+            margin: 0 auto;
+        }
+        #image {
+            max-width: 100%;
+            display: block;
+            height: auto;
+            margin: 0 auto;
+        }
+        #tribute-info {
+            margin: 0 auto;
+            padding: 10px 20% 10px 20%;
+            font-size: 1.1em;
+        }
+            @media (max-width: 768px) {
+                #tribute-info {
+                    padding: 10px 15% 10px 15%;
+                }
+            }
+        ul {
+            list-style-type:square;
+        }
+        .blockquote {
+                margin-left: auto;
+                margin-right: 20px;
+                width: 65%;
+                height: auto;
+                font-style: italic;
+                font-size: 12pt;
+                border: 2px solid;
+                position: relative;
+                padding: 5px;
+        }
+        .blockquote:before, .blockquote:after {
+                 position: absolute;
+                 content: no-open-quote;
+                 width: 0;
+                 height: 0;
+                 top: 100%;
+                 left: 15%;
+                 border-left: 0px solid transparent;
+        }
+        .blockquote:before {
+                    border-right: 34px solid transparent;
+                    border-top: 34px solid black;
+                    z-index: 1;
+        }
+        .blockquote:after {
+                    margin-top: -1px;
+                    margin-left: 1px;
+                    border-right: 33px solid transparent;
+                    border-top: 33px solid lightgray;
+                    z-index: 2;
+        } 
+        #farmerIcon {
+            width:50%;
+        }
+        #tribute-link {
+            font-size: 10.5pt;
+            text-align: center;
+        }
+        .Nobel {
+            text-decoration: underline;
+        }
+        a:link{
+         color: darkslategrey;
+         }
+        a:hover{
+         font-weight: bold;
+         font-size:1.25em;
+         color: royalblue;
+         }
+        a:visited{
+         color: darkslategrey;
+         }
+        footer{
+            color: darkslategrey;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            background-color: ghostwhite;
+            font-size: .54em;
+            padding: 10px;
+        }
+            @media (min-width: 780px) {
+                .blockquote {
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 35%;
+                    height: auto;
+                    font-style: italic;
+                    font-size: 12pt;
+                    border: 3px solid;
+                    position: relative;
+                    padding: 5px;
+                }
+                #farmerIcon {
+                    width:20%;
+                    float: left;
+                    margin-left: 300px;
+                }
+                footer{
+                    position: relative;
+                    top: 275px;
+                    left: 0px;
+                    text-align: right;
+                }
+        }
+    </style>
+</head>
+
+<body>
+    <main id="main">
+    <header>
+        <center><h1>Dr. Norman Borlaug</h1></center>
+        <p id="title"> An American Agricultural Scientist</p> <!-- string (i.e. text) that describes the subject of the tribute page -->
+    </header>
+        <figure id="img-div">
+            <center><img id="image" src="https://live.staticflickr.com/2459/3915704478_89efd4c7ec_z.jpg" alt="Borlaug in the Wheatfield"><br>
+            <figcaption id="img-caption">Dr. Norman Borlaug contributed to the Green Revolution worldwide. There is plenty of wheat for everyone!</figcaption></center>
+        </figure>
+        
+        <section id="tribute-info" cite="https://en.wikipedia.org/wiki/Norman_Borlaug">
+        <article><!-- textual content describing the subject of the tribute page -->
+            <h2 tabindex="0">Accomplishments:</h2>
+            <ul>
+            <li><strong>1965 -</strong>
+            In 1965, after extensive testing, Borlaug's team, under Anderson, began its effort by importing about 450 tons of Lerma Rojo and Sonora 64 semi-dwarf seed varieties: 250 tons went to Pakistan and 200 to India.</li>
+            
+            <li><strong>1968 -</strong>
+            Borlaug received what he considered an especially satisfying tribute when the people of Ciudad Obregón, where some of his earliest experiments were undertaken, named a street after him. Also in that year, he became a member of the U.S. National Academy of Sciences.</li>
+            
+            <li><strong>1970 -</strong>
+            He was given an honorary doctorate by the Agricultural University of Norway. He also was awarded the Nobel Peace Prize by the Norwegian Nobel Committee "for his contributions to the 'green revolution' that was having such an impact on food production particularly in Asia and in Latin America.</li>
+            
+            <li><strong>1971 -</strong>
+            Borlaug received the American Academy of Achievement's Golden Plate Award.</li>
+
+            <li><strong>1974 -</strong>	
+            In 1974, he was awarded a Peace Medal (in the form of a dove, carrying a wheat ear in its beak) by Haryana Agricultural University, Hisar, India.</li>
+
+            <li><strong>1975 -</strong>	
+            In 1975, he was named a Distinguished Fellow of the Iowa Academy of Science.</li>
+
+            <li><strong>1980 -</strong>
+            He received the S. Roger Horchow Award for Greatest Public Service by a Private Citizen, an award given out annually by Jefferson Awards. He was elected honorary member of the Hungarian Academy of Sciences, too.</li>
+            
+            <li><strong>1986 -</strong>
+            Borlaug was inducted into the Scandinavian-American Hall of Fame during Norsk Høstfest.</li>
+                
+            <li><strong>1997 -</strong>	
+            Norman Borlaug on World Hunger written by Norman Borlaug was first published in 1997.</li>
+
+            <li><strong>2005 -</strong>	
+            As of January 2004, Borlaug had received 49 honorary degrees from as many universities, in 18 countries, the most recent from Dartmouth College on June 12, 2005, and was a foreign or honorary member of 22 international Academies of Sciences.</li>
+
+            <li><strong>2006 -</strong>	
+            In August 2006, Dr. Leon Hesser published The Man Who Fed the World: Nobel Peace Prize Laureate Norman Borlaug and His Battle to End World Hunger, an account of Borlaug's life and work.</li>
+            </ul>
+        </article>
+            <p tabindex="1">You can read more about Dr. Norman Borlaug on the <a id="tribute-link" target="_blank" class="Nobel" href="https://www.nobelprize.org/prizes/peace/1970/borlaug/biographical/">Nobel Peace Prize's<!-- links to an outside site that contains additional information about the subject of the tribute to open in a new tab--></a> website!</p>
+        </section>
+        
+        <section id="quote">
+            <blockquote class="blockquote" cite="https://www.brainyquote.com/quotes/norman_borlaug_793397" tabindex="2">
+                "When wheat is ripening properly, when the wind is blowing across the field, you can hear the beards of the wheat rubbing together. They sound like the pine needles in a forest. It is a sweet, whispering music that once you hear, you never forget."<br>
+                -Norman Borlaug
+            </blockquote>
+            <img id="farmerIcon" src="Farmer.png" alt="farmer"> 
+            <br>
+        </section>
+    </main>
+    <footer>
+        Created by: <a href="PortfolioWebpage.html">Alexis Chanthinith</a><br>
+        Source: Norman Borlaug. (2020, October 15). Retrieved October 28, 2020, from <br><a href="https://en.wikipedia.org/wiki/Norman_Borlaug">https://en.wikipedia.org/wiki/Norman_Borlaug</a></footer>
+</body>
+</html>

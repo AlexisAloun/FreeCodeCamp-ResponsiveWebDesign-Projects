@@ -1,0 +1,428 @@
+<!DOCTYPE HTML>
+<html>
+    
+<head>
+<title>Product Landing Page</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<!-- freeCodeCamp Test CDN -->
+<link href="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
+<style>
+header {
+  position: fixed;
+  top: 0;
+  min-height: 75px;
+  margin: -10px;
+  width: 100%;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: lightgray;
+}
+#header-img{width: 5%; fill: steelblue;}
+h1 {
+  display: inline;
+  color: steelblue;
+  font-family: 'Roboto', sans-serif;
+  font-variant: small-caps;
+}
+li {
+  list-style: none;
+}
+a:link {
+  color: black;
+  text-decoration: none;
+}
+a:hover{
+ font-weight: bold;
+ font-size:1.25em;
+ color: steelblue;
+ }
+a:visited{
+ color: black;
+ }
+a:hover{
+ font-weight: bold;
+ font-size:1.25em;
+ color: steelblue;
+ }   
+body {
+  background-color: #eee;
+  font-family: 'Open Sans', sans-serif;
+}    
+.container {
+  width: 100%;
+  margin: 0 auto
+}
+
+.button {
+  padding: 5px;
+  height: 50px;
+  width: 125px;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 4px;
+  background-color: steelblue;
+  cursor: pointer;
+}
+
+.iconColumn {
+  display: flex;
+}
+.bi-award, .bi-truck, .bi-shield-check {
+  fill:steelblue; 
+}
+
+nav {
+  font-weight: 400;
+}
+
+nav > ul {
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#formsection {
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+  margin-top: 50px;
+  margin-bottom: -100px;
+}
+
+::placeholder {
+  color: steelblue;
+  text-align: center;
+}    
+    
+#formsection > h2 {
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+
+#formsection input[type='email'] {
+  max-width: 275px;
+  width: 100%;
+  padding: 5px;
+}
+
+#formsection input[type='submit'] {
+  max-width: 150px;
+  width: 100%;
+  height: 30px;
+  margin: 15px 0;
+  border: 0;
+  background-color: steelblue;
+  color: white;
+}
+
+#formsection input[type='submit']:hover {
+  background-color: lightblue;
+  transition: background-color 1s;
+}
+
+#features {
+  margin-top: 30px;
+  padding-top: 75px;
+  margin-bottom: -75px;
+}
+
+#features .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 125px;
+  width: 20vw;
+}
+
+#features .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 125px;
+  width: 80vw;
+  padding: 5px;
+}
+
+#video-sec {
+  padding-top: 75px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#video-sec > iframe {
+  max-width: 560px;
+  width: 100%;
+}
+
+#pricing {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 3);
+  margin: 10px;
+  border: 1px solid #000;
+  border-radius: 2.5px;
+}
+.product > .level {
+  background-color: lightgray;
+  color: steelblue;
+  padding: 15px 0;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.product > h2 {
+  margin-top: 15px;
+  text-align: center;
+}
+.product > ol {
+  margin-left: -35px;
+  text-align: center;
+}
+.product > ol > li {
+  padding: 5px;
+}
+
+.product > button {
+  border: 0;
+  margin: 15px 0;
+  background-color: steelblue;
+  font-weight: 400;
+  color: white;
+}
+.product > button:hover {
+  background-color: lightblue;
+  transition: background-color 1s;
+}
+
+footer {
+  margin-top: 30px;
+  background-color: #ddd;
+  padding: 20px;
+}
+footer > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+footer > ul > li {
+  padding: 0 12px;
+}
+footer > span {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  color: #444;
+}
+    
+@media (max-width: 700px) {
+  nav > ul {
+    flex-direction: column;
+    padding-right:35px;
+    text-align: right;
+  }
+  #formsection {
+    margin-top:105px;
+    margin-bottom: -75px;
+  }
+  #features .icon {
+    display:none;
+  }
+  nav {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  nav li {
+    padding-bottom: 5px;
+  }
+  #features .description {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    height: 150px;
+  }
+  #features {
+    margin-top: 0;
+    padding-top: 95px;
+    margin-bottom: -90px;
+  }
+  header {
+    flex-wrap:nowrap;
+  }
+  #header-img {
+  width:10%;      
+  }
+  h1 {
+    font-size: 1.5em; 
+  }
+  #video-sec{
+    padding-top: 125px;
+    margin-bottom:-75px;
+  }
+  #pricing {
+    flex-direction: column;
+    padding-top: 125px;
+  }
+  .product {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
+    img{display: none;}
+</style>
+</head>
+
+<body>   
+<div id="wholepage">
+      
+  <header id="header">
+  <img
+    id="header-img"
+    src=" "
+    alt=" "/>
+  <div id="logo">
+  <svg viewBox="0 0 16 16" id="header-img" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M4 4.5a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 0 1v.5h4.14l.386-1.158A.5.5 0 0 1 11 4h1a.5.5 0 0 1 0 1h-.64l-.311.935.807 1.29a3 3 0 1 1-.848.53l-.508-.812-2.076 3.322A.5.5 0 0 1 8 10.5H5.959a3 3 0 1 1-1.815-3.274L5 5.856V5h-.5a.5.5 0 0 1-.5-.5zm1.5 2.443l-.508.814c.5.444.85 1.054.967 1.743h1.139L5.5 6.943zM8 9.057L9.598 6.5H6.402L8 9.057zM4.937 9.5a1.997 1.997 0 0 0-.487-.877l-.548.877h1.035zM3.603 8.092A2 2 0 1 0 4.937 10.5H3a.5.5 0 0 1-.424-.765l1.027-1.643zm7.947.53a2 2 0 1 0 .848-.53l1.026 1.643a.5.5 0 1 1-.848.53L11.55 8.623z"/></svg>
+  <h1>Arctic Carbon Bikes</h1>
+  </div>
+
+    <nav id="nav-bar">
+      <ul>
+        <li><a class="nav-link" href="#features">Features</a></li>
+        <li><a class="nav-link" href="#video-sec">Simple Tricks To Learn</a></li>
+        <li><a class="nav-link" href="#pricing">Own Your Bike</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container"></div>
+
+  <section id="formsection">
+    <h2>Handcrafted Lightweight Masterpieces</h2>
+    <form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
+      <input tabindex="0" name="email" id="email" type="email"
+        placeholder="Enter Your Email Address"
+        required/>
+      <input id="submit" type="submit" value="GET STARTED" class="button" />
+    </form>
+  </section>
+
+  <div class="container">
+    <section id="features">
+      <div class="iconColumn">
+        <div class="icon"><svg width="5em" height="5em" viewBox="0 0 16 16" class="bi-award" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M9.669.864L8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68L9.669.864zm1.196 1.193l-1.51-.229L8 1.126l-1.355.702-1.51.229-.684 1.365-1.086 1.072L3.614 6l-.25 1.506 1.087 1.072.684 1.365 1.51.229L8 10.874l1.356-.702 1.509-.229.684-1.365 1.086-1.072L12.387 6l.248-1.506-1.086-1.072-.684-1.365z"/>
+  <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
+</svg></div>
+        <div class="description">
+          <h2>Premium Materials</h2>
+          <p>
+            Our bicycles use the toughest carbon fiber which is sourced locally. This
+            will increase the longevity of your purchase.
+          </p>
+        </div>
+      </div>
+      <div class="iconColumn">
+        <div class="icon"><svg width="5em" height="5em" viewBox="0 0 16 16" class="bi-truck" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+</svg></div>
+        <div class="description">
+          <h2>Fast Shipping</h2>
+          <p>
+            We make sure you recieve your bicycle as soon as we have finished
+            making it. We also provide free returns if you are not satisfied.
+          </p>
+        </div>
+      </div>
+      <div class="iconColumn">
+        <div class="icon">
+          <svg width="5em" height="5em" viewBox="0 0 16 16" class="bi-shield-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M5.443 1.991a60.17 60.17 0 0 0-2.725.802.454.454 0 0 0-.315.366C1.87 7.056 3.1 9.9 4.567 11.773c.736.94 1.533 1.636 2.197 2.093.333.228.626.394.857.5.116.053.21.089.282.11A.73.73 0 0 0 8 14.5c.007-.001.038-.005.097-.023.072-.022.166-.058.282-.111.23-.106.525-.272.857-.5a10.197 10.197 0 0 0 2.197-2.093C12.9 9.9 14.13 7.056 13.597 3.159a.454.454 0 0 0-.315-.366c-.626-.2-1.682-.526-2.725-.802C9.491 1.71 8.51 1.5 8 1.5c-.51 0-1.49.21-2.557.491zm-.256-.966C6.23.749 7.337.5 8 .5c.662 0 1.77.249 2.813.525a61.09 61.09 0 0 1 2.772.815c.528.168.926.623 1.003 1.184.573 4.197-.756 7.307-2.367 9.365a11.191 11.191 0 0 1-2.418 2.3 6.942 6.942 0 0 1-1.007.586c-.27.124-.558.225-.796.225s-.526-.101-.796-.225a6.908 6.908 0 0 1-1.007-.586 11.192 11.192 0 0 1-2.417-2.3C2.167 10.331.839 7.221 1.412 3.024A1.454 1.454 0 0 1 2.415 1.84a61.11 61.11 0 0 1 2.772-.815z"/>
+  <path fill-rule="evenodd" d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+</svg>
+        </div>
+        <div class="description">
+          <h2>Quality Assurance</h2>
+          <p>
+            For every purchase you make, we will ensure there are no damages or
+            faults and we will check and test the bicycle for safety.
+          </p>
+        </div>
+      </div>
+      
+    </section>
+    <section id="video-sec">
+      <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/qgO9u4Y9EnY?start=30" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+    
+    <section id="pricing">
+      <div class="product" id="bmx">
+        <div class="level">BMX Bike</div>
+        <h2>$600</h2>
+        <ol>
+          <li>Pegs</li>
+          <li>Removable Brake Mounts</li>
+          <li>Ultra Light</li>
+          <li>Supports Health</li>
+        </ol>
+        <button class="button">SELECT</button>
+      </div>
+      <div class="product" id="touring">
+        <div class="level">Touring Bike</div>
+        <h2>$900</h2>
+        <ol>
+          <li>Linear Pull Brakes</li>
+          <li>Low Gear Ratio</li>
+          <li>Flat Handle Bars</li>
+          <li>Heavy Duty Wide Wheels</li>
+        </ol>
+        <button class="button">SELECT</button>
+      </div>
+      <div class="product" id="electric">
+        <div class="level">Electric Bicycle</div>
+        <h2>$1200</h2>
+        <ol>
+          <li>Silent</li>
+          <li>Rechargable</li>
+          <li>Low Maintenance</li>
+          <li>Fast Speed</li>
+        </ol>
+        <button class="button">SELECT</button>
+      </div>
+    </section>
+    
+    <footer>
+      <ul>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <span>Copyright 2020, Arctic Carbon Bikes | <a href="PortfolioWebpage.html"> Alexis Chanthinith</a></span>
+    </footer>
+    
+  </div>
+</div>
+</body> 
+</html>

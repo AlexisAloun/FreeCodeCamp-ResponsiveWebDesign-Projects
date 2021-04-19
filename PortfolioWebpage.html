@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Reset CSS -->
+    <link href="reset.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- Google Font: Teko and Hind -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind&family=Teko:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- IcoFont ICON CDN -->
+    <link rel="stylesheet" href="C:\Users\ALexis\Documents\Certified Web Development\Code Camp Responsive Web Design Projects\icofont\icofont.min.css">
+    <!-- freeCodeCamp Test CDN -->
+    <link href="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
+    <title>Personal Portfolio Webpage</title>
+    <style>
+    h1, h2 {
+      font-family: 'Teko', sans-serif;
+      font-weight: bold;
+    }
+    p {font-family: 'Hind', sans-serif;}
+    #navbar {
+      display: flex;
+      justify-content: flex-end;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: hsl(0, 0%, 25%);
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+      z-index: 1;
+    }
+    .navlink {
+      display: flex;
+      margin-right: 25px;
+    }
+    nav li {
+      margin: 10px 25px 0px 25px;
+      list-style-type:none;
+    }
+    nav a:link {
+      font-family: 'Teko', sans-serif;
+      color: darkblue;
+      text-decoration:none;
+      font-variant: small-caps;
+      font-size:1.5em;
+      letter-spacing: 3px;;
+    }
+    nav a:hover{
+     font-weight: bold;
+     font-size:1.75em;
+     color: dodgerblue;
+     }
+    nav a:visited{
+     color: darkblue;
+     }
+    nav a:hover{
+     font-weight: bold;
+     font-size:1.75em;
+     color: dodgerblue;
+     }
+    #welcome-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      background-color: #000;
+      background-image: linear-gradient(47deg, darkblue 0%, dodgerblue 100%);
+    }
+    h1 {font-size: 5em;}    
+    #welcome-section > p {
+      font-size: 2em;
+      font-weight: 200;
+      font-style: italic;
+      color:darkblue;
+      font-family: 'Hind', sans-serif;
+    }
+    #whole {
+      background-color: #999;       
+    }
+    #about {
+      padding-top: 50px;
+      text-align: center;        
+    }
+    #about h2 {
+      font-variant: small-caps;
+      font-size:3em;}
+    #projects {
+      text-align: center;
+      padding: 50px;
+    }
+    #projects h2 {
+      color: darkblue;
+      font-variant: small-caps;
+      font-size:3em;
+      max-width: 640px;
+      margin: 0 auto 6rem auto;
+      border-bottom: 0.2rem solid darkblue;
+    }
+    #projectsGrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+      grid-gap: 50px;
+      width: 85%;
+      max-width: 1280px;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+    .project-tile {
+      background: hsl(0, 0%, 25%);
+      width: auto;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, .75);
+      border-radius: 4px;
+    }
+    .projectimg {
+      height: 87%;
+      width: 100%;
+      border-radius: 4px;
+      opacity: .35;
+    }
+    .projectimg:hover {
+      opacity: 1.0;
+      transition: opacity .5s;
+    }
+    .project-title {
+      font-size: 2em;
+      background-color: hsl(0, 0%, 25%); 
+      padding: 5px;
+    }
+    #projects a p {
+      font-family: 'Teko', sans-serif;
+    }
+    #projects a:link {
+      color: dodgerblue;
+      text-decoration: none;
+      font-size:1.1em;
+    }
+    #projects a:hover{
+      color: darkblue;
+      transition: color .5s;
+     }
+    #projects a:visited{
+      color: dodgerblue;
+     }
+    #projects a:hover{
+      color: darkblue;
+      transition: color .5s;
+     }
+    footer {
+      background-image: linear-gradient(248deg, darkblue 0%, dodgerblue 100%);
+      width:100%;
+      text-align: center;
+      padding: 15px;
+    }
+    footer  h2 {font-size:3.25em;}
+    footer  p {font-size:1.25em;}
+    footer ul {
+     display:flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     margin:0 auto;
+     display: flex;
+     justify-content: center;
+     list-style-type:none;
+    }
+    footer li {
+      margin: 10px 25px 10px 25px;
+      width:5em;
+    }
+    footer a:link {
+      color: hsl(0, 0%, 25%);
+      text-decoration: none;
+    }
+    footer a:hover{
+     color: darkblue;
+     transition: color .5s;
+     }
+    footer a:visited{
+     color: hsl(0, 0%, 25%);
+     }
+    footer a:hover{
+     color: darkblue;
+     transition: color .5s;
+     }
+        @media(max-width:1024px){
+         #projectsGrid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+          grid-gap: 15px;
+          width: 100%;
+          max-width: 550px;
+          margin: 0 auto;
+          margin-bottom: 25px;
+        }
+         .project-tile {
+          width: 125px;
+          margin: 0 auto;
+        }
+        .projectimg {
+          width: 125px;
+          height: 45%;
+          margin: 0 auto;
+        }
+        }
+        @media(max-width:425px){
+         h1, #welcome-section > p {
+           text-align: center;        
+         }
+         nav li {
+           margin: 10px 15px 0px 15px;    
+         }
+         .projectimg {
+           height: 40%;
+           margin: 0 auto;
+         }
+        }
+    </style>
+  </head>
+  <body>
+    <nav id="navbar">
+     <ul class="navlink">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+     </ul>    
+    </nav>
+    
+    <div id="whole">  
+    <section id="welcome-section">
+    <h1>Hey, I'm Alexis!</h1>
+    <p>a web developer</p>
+    </section>
+    
+    <section id="about">
+    <h2>About</h2>
+    <p>This is my portfolio. Here you will see responsive web design projects I've completed that were assigned by freeCodeCamp.</p>
+    </section>
+      
+    <section id="projects" class="projects-section">
+    <h2>Projects</h2>
+      <div id="projectsGrid">
+      <a href="TributePage.html" target="_blank"
+      class="project-tile"><img class="projectimg" src="Tribute.PNG" alt="project"/>
+      <p class="project-title">
+        Tribute Page
+      </p></a>
+      <a href="SurveyForm.html" target="_blank"
+      class="project-tile"><img class="projectimg" src="survey.PNG" alt="project"/>
+      <p class="project-title">
+        Survey Form
+      </p></a>
+      <a href="ProductLandingPage.html" target="_blank"
+      class="project-tile"><img class="projectimg" src="product.PNG" alt="project"/>
+      <p class="project-title">
+        Product Landing Page
+      </p></a>
+      <a href="TechnicalDocumentationPage.html" target="_blank"
+      class="project-tile"><img class="projectimg" src="techdoc.PNG" alt="project"/>
+      <p class="project-title">
+        Technical Doc. Page
+      </p></a>
+      </div>
+    </section>  
+    
+    <footer id="contact">
+    <h2>Let's work together...</h2>
+    <p>How do you take your coffee?</p>
+    <ul>
+        <li><a href="https://www.facebook.com/freecodecamp" id="profile-link" target="_blank"><i class="icofont-facebook" style="font-size: 2em;"></i></a></li>
+        <li><a href="https://github.com/AlexisAloun" id="profile-link" target="_blank"><i class="icofont-github" style="font-size: 2em;"></i></a></li>
+        <li><a href="https://twitter.com/AlexisAloun" id="profile-link" target="_blank"><i class="icofont-twitter" style="font-size: 2em;"></i></a></li>
+        <li><a href="https://www.instagram.com/lexi_lit28/" id="profile-link" target="_blank"><i class="icofont-instagram" style="font-size: 2em;"></i></a></li>
+        <li><a href="mailto:AlexisAloun@Gmail.com" id="profile-link" target="_blank"><i class="icofont-ui-email" style="font-size: 2em;"></i></a></li>
+    </ul>
+    </footer>  
+      
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  </div>  
+  </body>
+</html>
